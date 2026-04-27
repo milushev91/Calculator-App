@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       META & PAGE SETTINGS
+       ========================================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glassmorphism Neon Calculator</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================
+       CALCULATOR WRAPPER
+       ========================================================= -->
+  <div class="calculator">
+
+    <!-- =========================================================
+         DISPLAY SCREEN
+         ========================================================= -->
+    <div class="display" id="display">0</div>
+
+
+    <!-- =========================================================
+         BUTTON GRID
+         ========================================================= -->
+    <div class="buttons">
+
+      <!-- =======================
+           TOP ROW (Actions)
+           ======================= -->
+      <button class="btn action" data-key="Escape" onclick="clearDisplay()">AC</button>
+      <button class="btn action" data-key="±" onclick="toggleSign()">±</button>
+      <button class="btn action" data-key="%" onclick="append('%')">%</button>
+      <button class="btn operator" data-key="/" onclick="append('/')">÷</button>
+
+      <!-- =======================
+           ROW 2
+           ======================= -->
+      <button class="btn" data-key="7" onclick="append('7')">7</button>
+      <button class="btn" data-key="8" onclick="append('8')">8</button>
+      <button class="btn" data-key="9" onclick="append('9')">9</button>
+      <button class="btn operator" data-key="*" onclick="append('*')">×</button>
+
+      <!-- =======================
+           ROW 3
+           ======================= -->
+      <button class="btn" data-key="4" onclick="append('4')">4</button>
+      <button class="btn" data-key="5" onclick="append('5')">5</button>
+      <button class="btn" data-key="6" onclick="append('6')">6</button>
+      <button class="btn operator" data-key="-" onclick="append('-')">−</button>
+
+      <!-- =======================
+           ROW 4
+           ======================= -->
+      <button class="btn" data-key="1" onclick="append('1')">1</button>
+      <button class="btn" data-key="2" onclick="append('2')">2</button>
+      <button class="btn" data-key="3" onclick="append('3')">3</button>
+      <button class="btn operator" data-key="+" onclick="append('+')">+</button>
+
+      <!-- =======================
+           BOTTOM ROW
+           ======================= -->
+      <button class="btn zero" data-key="0" onclick="append('0')">0</button>
+      <button class="btn" data-key="." onclick="append('.')">.</button>
+
+      <!-- Equals (supports Enter and =) -->
+      <button class="btn equals" data-key="Enter" onclick="calculate()">=</button>
+      <button class="btn equals" data-key="=" onclick="calculate()" style="display:none"></button>
+
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SCRIPT
+       ========================================================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
